@@ -1,0 +1,66 @@
+.tabs {
+	position: relative;
+	height: 500px;	//временный стиль
+
+	&__nav {
+		&-list {
+			display: flex;
+			align-items: center;
+		}
+
+		&-btn {
+			cursor: pointer;
+			background-color: rgb(50, 104, 104);
+			color: #fff;
+			padding: 15px 62px;
+			transition: background-color 0.3s linear, color 0.3s linear;
+
+			&--active {
+				background-color: #fff;
+				color: rgb(50, 104, 104);
+				pointer-events: none;
+			}
+		}
+	}
+
+	&__container {
+		background-color: #fff;
+		height: 450px;	//временный стиль
+		overflow: auto;
+	}
+
+	&__content {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		background-color: #3350f3;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: background-color 0.3s linear;
+
+		&:hover {
+			background-color: darken(#3350f3, 30%);
+		}
+
+		& svg {
+			pointer-events: none;
+		}
+
+		&--prev {
+			left: -104px;
+		}
+
+		&--next {
+			right: -104px;
+		}
+	}
+}

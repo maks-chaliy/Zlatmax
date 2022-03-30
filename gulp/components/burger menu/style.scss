@@ -1,0 +1,68 @@
+//класс для удаления скролла при открытом меню
+.stop-scroll {
+	overflow: hidden;
+}
+
+.burger {
+	position: relative;
+	display: none;
+	width: 44px;
+	height: 44px;
+	border: 1px solid #000;
+	border-radius: 10px;
+	cursor: pointer;
+
+
+	&__line {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		width: 24px;
+		height: 2px;
+		background-color: black;
+		transition: all 0.3s linear;
+
+		&--third {
+			margin-top: 7px;
+		}
+
+		&--fourth {
+			margin-top: -7px;
+		}
+	}
+
+	&--active {
+		.burger__line {
+			&--first {
+				transform: rotate(45deg);
+				left: 22%;
+			}
+
+			&--second {
+				transform: rotate(-45deg);
+				left: 22%;
+			}
+
+			&--third,
+			&--fourth {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+
+// => удалить этот миксин, он есть в глобальных настройках
+@mixin md-min {
+	@media (max-width: (1024px)) {
+		@content;
+	}
+}
+
+
+@include md-min {
+	.burger {
+		display: block;
+	}
+}

@@ -1,0 +1,46 @@
+.modal {
+
+	$parent: &;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s linear;
+
+	&__content{
+		display: flex;
+		flex-direction: column;
+		max-height: 80vh;
+		min-height: 290px;
+		min-width: 290px;
+		overflow: hidden;
+		background-color: #fff;
+		border-radius: 8px;
+		transition: all 0.3s linear;
+		transform: translateY(-100px);
+	}
+
+	&__body {//чтобы появлялся скролл если много текста
+		flex-grow: 1;
+		overflow: auto;
+	}
+
+	&--active {
+		opacity: 1;
+		visibility: visible;
+
+		#{$parent}__content {
+			transform: translateY(0);
+		}
+	}
+}
+
+

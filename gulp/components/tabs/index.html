@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<div class="tabs">
+
+		<!-- plugins ------------ 
+		---------------q-tabs-btn -->
+
+		<div class="tabs__nav">
+			<ul class="list-reset tabs__nav-list">
+				<li class="tabs__nav-item">
+					<button class="btn-reset tabs__nav-btn tabs__nav-btn--active" data-tabs-path="#main">Главная</button>
+				</li>
+				<li class="tabs__nav-item">
+					<button class="btn-reset tabs__nav-btn" data-tabs-path="#archive">Архив</button>
+				</li>
+				<li class="tabs__nav-item">
+					<button class="btn-reset tabs__nav-btn" data-tabs-path="#settings">Настройки</button>
+				</li>
+			</ul>
+		</div>
+
+
+		<!-- 
+		-	чтобы связать кнопку с переключением контента у кнопки data долженг быть с #
+		- а у контента id с таким же название но без #
+		- <button data-tabs-path="#main"  =>   <div class="tabs__content id="main">
+		
+		-	назавание data должно быть сопоставимо с названием кнопки по примеру
+		- data-tabs-path="#main" => Главная
+		- data-tabs-path="#settings" => Настройки
+
+		-	если будут использованы svg у боковых кнопок prev и next
+		- то svg присвоить свойство => svg {pointer-events: none;}
+
+		-	в script есть пометки нужно их удалить
+		-	в script есть условие для боковых кнопок prev и next,
+		- если не использовать эти кнопки то условие удалить
+
+		- если в поле tabs__content будет много контента и он не поместится в заданные размеры модального окна,
+		- то tabs__container нужно присвоить высоту этого самого контента, сделать вертикальный скрол и
+		- добавить отступы сверху и снизу чтобы скрол не прислонялся вплотную к другом разделам
+		- tabs__container {height: 200px; overflow-y: auto;	margin-top: 20px;}
+			-->
+
+
+		<!-- plugins ------------ 
+			---------------q-tabs -->
+
+		<div class="tabs__container tabs__container--active" data-tabs-target="main">
+			<div class="tabs__content">
+				<h2>Главная</h2>
+			</div>
+		</div>
+		<div class="tabs__container" data-tabs-target="archive">
+			<div class="tabs__content">
+				<h2>Опыт работы</h2>
+			</div>
+		</div>
+		<div class="tabs__container" data-tabs-target="settings">
+			<div class="tabs__content">
+				<h2>Награды</h2>
+			</div>
+		</div>
+
+
+		<button class="tabs__arrow tabs__arrow--prev" aria-label="Назад">
+			<svg>
+				<use xlink:href="img/svg/sprite.svg#"></use>
+			</svg>
+		</button>
+		<button class="tabs__arrow tabs__arrow--next" aria-label="Вперед">
+			<svg>
+				<use xlink:href="img/svg/sprite.svg#"></use>
+			</svg>
+		</button>
+	</div>
+
+	<script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

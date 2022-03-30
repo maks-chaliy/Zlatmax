@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<!-- plugins ------------ 
+		---------------q-modal-btn-open -->
+
+	<a href="#modal-1" class="btn-reset modal-btn--open"><span>Open modal 1</span></a>
+
+
+	<!-- 
+	-	чтобы связать кнопку с модалкой у них должен быть 
+		одинаковый id
+		<a href="#modal-1"         => 	<div class="modal" id="modal-1">
+		<a href="#trainers_01"     => 	<div class="modal" id="trainers_01">
+		<a href="#marina_orlova"   => 	<div class="modal" id="marina_orlova">
+		-->
+
+
+	<!-- plugins ------------ 
+		---------------q-modal -->
+
+	<div class="modal" id="modal-1">
+		<div class="modal__content">
+			<div class="modal__header">
+				<button class="btn-reset modal-btn--close"><span>X</span></button>
+			</div>
+			<div class="modal__body">
+			</div>
+			<div class="modal__footer">
+				<button class="btn-reset modal-btn--close"></button>
+			</div>
+		</div>
+	</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
