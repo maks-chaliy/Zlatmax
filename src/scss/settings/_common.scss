@@ -8,8 +8,8 @@
 
 .container {
 	width: 100%;
-	max-width: 1250px;
-	padding: 0 15px;
+	max-width: $containerWidth;
+	padding: 0 $paddingWidth;
 	margin: 0 auto;
 }
 

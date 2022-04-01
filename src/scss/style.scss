@@ -8,13 +8,6 @@
 
 
 
-body {
-	background-image: url('@img/cover.jpg');
-	@include bg-cover;
-}
-
-
-
 //-----components-----
 @import 'components/header';
 

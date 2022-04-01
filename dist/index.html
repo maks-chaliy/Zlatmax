@@ -13,7 +13,73 @@
 <body>
 
 	<div class="site-container">
-		<header class="header"></header>
+		<header class="header">
+	<div class="header__top">
+		<div class="container">
+			<div class="header__top-inner">
+				<div class="header__menu menu">
+					<ul class="list-reset menu__list">
+						<li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Оплата и доставка</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Новости</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+					</ul>
+				</div>
+				<a href="#" class="top-header__user user">
+					<svg class="user__icon">
+						<use xlink:href="img/svg/sprite.svg#user"></use>
+					</svg>
+					<span class="user__caption">Личный кабинет</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="header__bottom">
+		<div class="container ">
+			<div class="header__bottom-inner">
+				<a href="index.html" class="header__logo logo">
+					<svg class="logo__icon">
+						<use xlink:href="img/svg/sprite.svg#logo"></use>
+					</svg>
+				</a>
+				<form action="#" class="header__form search-header">
+					<button class="btn-reset search-header__btn" type="submit">
+						<svg class="search-header__icon">
+							<use xlink:href="img/svg/sprite.svg#search"></use>
+						</svg>
+					</button>
+					<input class="input-reset search-header__input" type="text" placeholder="Поиск">
+				</form>
+				<div class="header__action">
+					<a href="#" class="header__location location">
+						<svg class="location__icon">
+							<use xlink:href="img/svg/sprite.svg#location"></use>
+						</svg>
+						<span class="location__caption">Москва</span>
+					</a>
+					<a href="tel:88007774967" class="header__phone phone">8-800-777-49-67
+						<svg class="phone__icon">
+							<use xlink:href="img/svg/sprite.svg#chevron_bottom"></use>
+						</svg>
+						<br>
+						<span class="phone__text">Заказать звонок</span>
+					</a>
+					<a href="#" class="cart">
+						<div class="cart__image">
+							<svg class="cart__icon">
+								<use xlink:href="img/svg/sprite.svg#cart"></use>
+							</svg>
+							<span class="cart__quantity">0</span>
+						</div>
+						<span class="cart__price">0р.</span>
+						<span class="cart__text">Оформить заказ</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
 		<main></main>
 		<footer class="footer"></footer>
 	</div>
